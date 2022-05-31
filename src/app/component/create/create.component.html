@@ -1,0 +1,19 @@
+<br>
+<br>
+<h2 class="text-center">AGREGAR NUEVO LIBRO</h2>
+<br>
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()" >
+    <div class="mb-3">
+        <label class="form-label"> Nombre del libro </label>
+        <input formControlName="title" type="text" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label"> Observacion del libro </label>
+        <input formControlName="content" type="text" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label"> Autor del libro </label>
+        <input formControlName="author" type="text" class="form-control" required>
+    </div>
+    <button  type="submit" class="btn btn-primary">AGREGAR</button>
+</form>

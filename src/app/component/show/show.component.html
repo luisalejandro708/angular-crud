@@ -1,0 +1,29 @@
+<br>
+<br>
+<h2 class="text-center">PAGINA INICIAL</h2>
+<br>
+<div class="d-grip gap-2 mt-4">
+</div>
+<table class="table table-hover table-striped">
+    <thead class="bg-dark text-white">
+        <tr>
+            <th class="text-center">Nombre del libro</th>
+            <th class="text-center">Observacion del libro</th>
+            <th class="text-center">Autor del libro</th>
+            <th class="text-center">Acciones</th>
+        </tr>
+    </thead>    
+    <tbody>
+        <tr *ngFor="let post of Posts">
+            <td class="text-center"> {{ post.title}} </td>
+            <td class="text-center"> {{ post.content}} </td>
+            <td class="text-center"> {{ post.author}} </td>
+            <td> 
+                <button routerLink="/edit/{{post.id}}" class="btn btn_outline-secondary"><i class="fa-solid fa-pen"></i></button>
+                <button (click)= "deleteRow(post)" class="btn btn-outline-danger"><i class="fa-solid fa-delete-left"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a routerLink="/create" class="btn btn-secondary btn-lg" type="button">AGREGAR NUEVO LIBRO</a>
